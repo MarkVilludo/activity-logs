@@ -1,0 +1,26 @@
+{
+    "name": "mark-villudo/activity-logs",
+    "description": "Laravel package API for user activity logs",
+    "keywords": [
+        "laravel",
+        "api",
+        "activity-logs"
+    ],
+    "authors": [
+        {
+            "name": "Mark Villudo"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "MarkVilludo\\ActivityLogs\\": "src/"
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    },
+    "minimum-stability": "dev"
+}
