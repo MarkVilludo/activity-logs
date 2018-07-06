@@ -12,7 +12,14 @@ composer require mark-villudo/activity-logs
 
 ## Usage
 ```
-  
+  //Activity logs
+  //user helper
+  $data['user_id'] = $user->id;
+  $data['type'] = 'user';
+  $data['action'] = 'Update Profile';
+  $data['description'] = 'Update profile settings.';
+  storeActivity($data);
+  //End activity logs
 ```
 
 
