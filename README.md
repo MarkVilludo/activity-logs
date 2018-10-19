@@ -42,6 +42,7 @@ class CreateActivityLogsTable extends Migration
             $table->string('type', 32)->nullable();
             $table->text('action'); //required
             $table->text('description')->nullable();
+            $table->string('ip_address', 64)->nullable();
             $table->timestamps();
         });
     }
