@@ -62,6 +62,11 @@ Publish table or automatically create table in database
 ```
 php artisan migrate
 ```
+## Or Publish its default migration file.
+
+```
+php artisan vendor:publish 
+```
 
 ## Usage
 ```
