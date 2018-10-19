@@ -1,4 +1,4 @@
-# image-upload
+# Activity logs
 Laravel package for user activity logs in the system.
 
 ## Installation
