@@ -67,12 +67,9 @@ php artisan migrate
 ## Usage
 ```
   //Activity logs
-  //user helper
-  $data['user_id'] = $user->id;
-  $data['type'] = 'user';
-  $data['action'] = 'Update Profile';
-  $data['description'] = 'Update profile settings.';
-  storeActivity($data);
+  //Parameter details (type , action, description)
+  storeActivity('Admin', 'Update Profile', 'Update Profile Settings');
+  
   //End activity logs
 ```
 
