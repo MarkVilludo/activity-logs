@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use App\Models\ActivityLog;
 
 if (!function_exists('storeActivity')) {
@@ -12,14 +13,19 @@ if (!function_exists('storeActivity')) {
      * @param string $filename
      * @return response
      */
-    function storeActivity($data)
-    {
+    function storeActivity($type, $action, $description)
+    {   
+        $userId = null;
+        if (Auth::check()) {
+            $userId = auth()->user()->id;
+        }
+        
         //Activity logs
         $activity = new ActivityLog;
-        $activity->type = $data['type']; //Payment //Orders //Others
-        $activity->user_id = $data['user_id'];
-        $activity->action = $data['action']; //Edit user, add order, deliverred order, etc
-        $activity->description = $data['description']; //message
+        $activity->type = $type; //Payment //Orders //Others
+        $activity->user_id = $userId;
+        $activity->action = $action; //Edit user, add order, deliverred order, etc
+        $activity->description = $description; //message
         $activity->save();
     }
 }
