@@ -26,6 +26,7 @@ if (!function_exists('storeActivity')) {
         $activity->user_id = $userId;
         $activity->action = $action; //Edit user, add order, deliverred order, etc
         $activity->description = $description; //message
+        $activity->ip_address = request()->ip(); //ip_address of a user
         $activity->save();
     }
 }
