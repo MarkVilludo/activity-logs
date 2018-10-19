@@ -67,11 +67,8 @@ php artisan migrate
 
 ## Usage
 ```
-  //Activity logs
-  //Parameter details (type , action, description)
+  //Parameter details (userType , action, description)
   storeActivity('Admin', 'Update Profile', 'Update Profile Settings');
-  
-  //End activity logs
 ```
 
 
