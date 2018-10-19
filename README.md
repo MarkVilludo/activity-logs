@@ -59,7 +59,7 @@ class CreateActivityLogsTable extends Migration
 }
 
 ```
-Migrate table or automatically create table in database
+Migrate table using composer and it's automatically create table in the database
 
 ```
 php artisan migrate
