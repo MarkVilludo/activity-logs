@@ -1,5 +1,5 @@
 # Activity logs
-Laravel package for user activity logs in the system.
+Laravel package for logs every user activity in the system.
 
 ## Installation
 
