@@ -1,7 +1,6 @@
 <?php
 
 use App\Models\ActivityLog;
-use App\User;
 
 if (!function_exists('storeActivity')) {
     /**
