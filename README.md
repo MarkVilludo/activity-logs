@@ -14,7 +14,7 @@ composer require mark-villudo/activity-logs
 Make model with migration file at the same time.
 
 ```
-php artisan make:model ActivityLog -m
+php artisan make:model Models/ActivityLog -m
 ```
 
 Activity Logs Table Structure
