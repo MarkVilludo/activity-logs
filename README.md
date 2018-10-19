@@ -12,6 +12,7 @@ composer require mark-villudo/activity-logs
 ## Setup Migrations and Model
 
 Make model with migration file at the same time.
+Note: At the package the model used is under "App\Models\" then please do so.
 
 ```
 php artisan make:model Models/ActivityLog -m
