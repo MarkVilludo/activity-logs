@@ -12,7 +12,8 @@
         }
     ],
     "require": {
-        "php": ">=7.0.0"
+        "php": ">=7.0.0",
+        "jenssegers/agent": "^2.6"
     },
     "autoload": {
         "psr-0": {
