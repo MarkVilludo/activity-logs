@@ -1,6 +1,11 @@
 # Activity logs
 Laravel package to log each user's activity in the system.
 
+## Usage after Installed package.
+```
+storeActivity('user type' , 'User Action', 'Description');
+
+```
 ## Installation
 
 Require this package with composer.
