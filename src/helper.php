@@ -25,6 +25,7 @@ if (!function_exists('storeActivity')) {
         $platform = $agent->platform();
         $device = $agent->device();
         $browser = $agent->browser();
+        $header = $agent->setUserAgent();
         
         //Activity logs
         $activity = new ActivityLog;
@@ -32,7 +33,7 @@ if (!function_exists('storeActivity')) {
         $activity->user_id = $userId;
         $activity->platform = $platform ? $platform : 'Unknown';
         $activity->device = $device;
-        $activity->browser = $browser;
+        $activity->browser = $header;
         $activity->action = $action; //Edit user, add order, deliverred order, etc
         $activity->description = $description; //message
         $activity->ip_address = request()->ip(); //ip_address of a user
