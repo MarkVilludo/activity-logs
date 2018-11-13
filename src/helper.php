@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use App\Models\ActivityLog;
-use Jenssenger\Agent\Agent;
+use Jenssegers\Agent\Agent;
 
 if (!function_exists('storeActivity')) {
     /**
@@ -24,7 +24,7 @@ if (!function_exists('storeActivity')) {
         
         $platform = $agent->platform();
         $device = $agent->device();
-        $browser = $agent->$browser();
+        $browser = $agent->browser();
         
         //Activity logs
         $activity = new ActivityLog;
