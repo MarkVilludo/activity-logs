@@ -30,7 +30,7 @@ if (!function_exists('storeActivity')) {
         $activity = new ActivityLog;
         $activity->type = $type; //Payment //Orders //Others
         $activity->user_id = $userId;
-        $activity->platform = $platform;
+        $activity->platform = $platform ? $platform : 'Unknown';
         $activity->device = $device;
         $activity->browser = $browser;
         $activity->action = $action; //Edit user, add order, deliverred order, etc
