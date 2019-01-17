@@ -76,4 +76,7 @@ php artisan migrate
   storeActivity('Admin', 'Update Profile', 'Update Profile Settings');
 ```
 
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
