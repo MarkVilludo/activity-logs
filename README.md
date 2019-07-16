@@ -42,12 +42,15 @@ class CreateActivityLogsTable extends Migration
     public function up()
     {
         Schema::create('activity_logs', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->integer('user_id')->nullable();
             $table->string('type', 32)->nullable();
             $table->text('action'); //required
             $table->text('description')->nullable();
             $table->string('ip_address', 64)->nullable();
+            $table->text('device')->nullable();
+            $table->text('platform')->nullable();
+            $table->text('browser')->nullable();
             $table->timestamps();
         });
     }
