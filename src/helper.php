@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\ActivityLog;
 use Jenssegers\Agent\Agent;
 
+use App\User;
+
 if (!function_exists('storeActivity')) {
     /**
      * Help resize images regardless of image dimension then save
@@ -39,7 +41,22 @@ if (!function_exists('storeActivity')) {
         $activity->ip_address = request()->ip(); //ip_address of a user
         $activity->save();
     }
+   
 }
 
+// Retrieve all activities
+if (!function_exists('getAllActivities')) {
+    function getAllActivities () {
+        $activities = ActivityLog::with('user')->latest()->get();
+        return $activities;
+    }
+}
 
+// Activities specific to a user
+if (!function_exists('getUserActivities')) {
+    function getUserActivities ($user_id) {
+        $activities = ActivityLog::where('user_id', $user_id)->latest()->get();
+        return $activities;
+    }
+}
     
